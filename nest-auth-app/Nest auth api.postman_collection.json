@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "bd253c9e-baef-4c82-ac17-954e7eea02f4",
+		"name": "Nest auth api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32211557"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"user@example2.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check user log In",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJzdWIiOjEsImlhdCI6MTcyMTM2NDk2NywiZXhwIjoxNzIxMzY4NTY3fQ.6DUMMWNn6PBncrbI2nYckOxlLbU3TWXJmFaI3V4vTDk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
